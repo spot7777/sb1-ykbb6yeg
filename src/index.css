@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-navy-900: #111111;
+  --color-navy-800: #1a1a1a;
+  --color-navy-700: #222222;
+  --color-steel-500: #B0B7C3;
+  --color-steel-600: #8E97A7;
+  --color-steel-300: #D0D5DC;
+  --color-gold-500: #C9A65C;
+  --color-gold-600: #B69147;
+  --color-gold-300: #D9BC85;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1a202c;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-gold-500 text-white rounded-lg font-medium hover:bg-gold-600 transition-colors duration-300 shadow-md hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-transparent text-white border-2 border-white rounded-lg font-medium hover:bg-white hover:text-navy-900 transition-colors duration-300;
+}
+
+/* Custom animations */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.7s ease-out forwards;
+}
+
+.animate-slide-up-delayed {
+  animation: slideUp 0.7s ease-out 0.2s forwards;
+}
+
+.animate-slide-up-delayed-more {
+  animation: slideUp 0.7s ease-out 0.4s forwards;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.7s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.7s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Custom class for theme colors */
+.text-navy-900 {
+  color: var(--color-navy-900);
+}
+
+.text-navy-800 {
+  color: var(--color-navy-800);
+}
+
+.text-navy-700 {
+  color: var(--color-navy-700);
+}
+
+.bg-navy-900 {
+  background-color: var(--color-navy-900);
+}
+
+.bg-navy-800 {
+  background-color: var(--color-navy-800);
+}
+
+.bg-navy-700 {
+  background-color: var(--color-navy-700);
+}
+
+.text-steel-500 {
+  color: var(--color-steel-500);
+}
+
+.text-steel-300 {
+  color: var(--color-steel-300);
+}
+
+.bg-steel-500 {
+  background-color: var(--color-steel-500);
+}
+
+.bg-steel-600 {
+  background-color: var(--color-steel-600);
+}
+
+.text-gold-500 {
+  color: var(--color-gold-500);
+}
+
+.text-gold-300 {
+  color: var(--color-gold-300);
+}
+
+.bg-gold-500 {
+  background-color: var(--color-gold-500);
+}
+
+.bg-gold-600 {
+  background-color: var(--color-gold-600);
+}
+
+.border-gold-500 {
+  border-color: var(--color-gold-500);
+}
+
+.hover\:bg-gold-600:hover {
+  background-color: var(--color-gold-600);
+}
+
+.hover\:text-gold-500:hover {
+  color: var(--color-gold-500);
+}
+
+.focus\:ring-gold-500:focus {
+  --tw-ring-color: var(--color-gold-500);
+}
+
+/* Fix for scrollbar jumps */
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
